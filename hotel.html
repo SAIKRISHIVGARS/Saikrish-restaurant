@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Saikrish Restaurant</title>
+  <link rel="stylesheet" href="hote.css" />
+</head>
+<body>
+  
+
+  <!-- Navigation -->
+  <header>
+    <div class="logo">Saikrish<span>Restaurant</span></div>
+    <div class="search-bar">
+        <input type="text" placeholder="Search your favorite" />
+      </div>
+    <nav>
+      <ul>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Menu</a></li>
+        <li><a href="#">Specials</a></li>
+        <li><a href="#">Gallery</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Taste the <span>Spice</span>, Relish the <span>Sweet!</span></h1>
+    <p>Authentic South Indian Flavors at Your Fingertips.</p>
+  </section>
+
+  <!-- Menu Section -->
+  <section class="menu">
+    <h2>Our Menu</h2>
+    <div class="menu-items">
+      <a href="breakfast.html" class="card-link">
+        <div class="card">
+          <img src="sk 1.jpg" alt="Breakfast" />
+          <h3>Breakfast</h3>
+        </div>
+      </a>
+      <div class="card">
+        <img src="sk 2.jpg" alt="Lunch" />
+        <h3>Lunch</h3>
+      </div>
+      <div class="card">
+        <img src="sk3.jpg" alt="Snacks" />
+        <h3>Chaat & Snacks</h3>
+      </div>
+    </div>
+  </section>
+
+  <!-- Specials -->
+  <section class="specials">
+    <h2>Our Specials</h2>
+    <div class="special-items">
+      <div class="card">
+        <img src="waterm.webp" alt="Season special" />
+        <h3>Season special</h3>
+      </div>
+      <div class="card">
+        <img src="biriyani.jpg" alt="Evening Special" />
+        <h3>Evening Special</h3>
+      </div>
+      <div class="card">
+        <img src="chef.avif" alt="bookings" />
+        <h3>bookings</h3>
+      </div>
+    </div>
+  </section>
+  <section class="gallery">
+    <h2>Dish Gallery</h2>
+    <div class="slider">
+      <div class="slides">
+        <img src="pizza.avif" alt="Dish 1" />
+        <img src="kfc .jpeg" alt="Dish 2" />
+        <img src="fries.jpeg" alt="Dish 3" />
+        <img src="burgers3.jpg" alt="Dish 4" />
+      </div>
+      <button class="prev">&#10094;</button>
+      <button class="next">&#10095;</button>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials">
+    <h2>What Our Customers Say</h2>
+    <blockquote>
+      "Loved the taste and especially the masala dosa and sweets!"
+      <footer>- xxx, Chennai</footer>
+    </blockquote>
+    <blockquote>
+      "Best place for vegetarian food and family-friendly vibes."
+      <footer>- xxx, Anna Nagar</footer>
+    </blockquote>
+  </section>
+
+  <!-- Review Cards Section -->
+<section class="reviews">
+    <h2>Customer Reviews</h2>
+    <div class="review-cards">
+      <div class="review-card">
+        <p>"The best South Indian breakfast I’ve had. Loved the vada and places were clean!"</p>
+        <h4>- xxx , Mogappair</h4>
+      </div>
+      <div class="review-card">
+        <p>"Their lunch idle is absolutely worth it. if u want to experience come over here guys"</p>
+        <h4>- xxx, Tambaram</h4>
+      </div>
+      <div class="review-card">
+        <p>"best for couples and they have some secret menus for it and i love it.  Must visit!"</p>
+        <h4>- yyy, Egmore</h4>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Saikrish Restaurant | All Rights Reserved</p>
+  </footer>
+  <script>
+    const slides = document.querySelector(".slides");
+    const images = document.querySelectorAll(".slides img");
+    const total = images.length;
+    let index = 0;
+  
+    document.querySelector(".next").onclick = () => {
+      index = (index + 1) % total;
+      slides.style.transform = `translateX(-${index * 100}%)`;
+    };
+  
+    document.querySelector(".prev").onclick = () => {
+      index = (index - 1 + total) % total;
+      slides.style.transform = `translateX(-${index * 100}%)`;
+    };
+  </script>
+</body>
+</html>
